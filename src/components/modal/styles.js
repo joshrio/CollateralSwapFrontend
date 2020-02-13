@@ -38,6 +38,7 @@ export const Body = styled.div`
   padding: 20px;
   display: flex;
   height: 100%;
+  flex-direction: column;
 `;
 
 export const Button = styled.button`
@@ -56,14 +57,22 @@ export const Button = styled.button`
   }
 `;
 
-export const Fees = styled.div`
+export const Form = styled.form`
   height: auto;
-  background: pink;
   display: flex;
-  align-items: space-between;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
 `;
 
-export const Label = styled.div`
+export const Fees = styled.div`
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+`;
+
+export const Bold = styled.div`
   font-family: dinBold;
   font-size: 16px;
   color: #2a2a2a;
@@ -71,15 +80,21 @@ export const Label = styled.div`
   line-height: 24px;
 `;
 
-export const Detail = styled.div`
-font-family: dinRegular'
-font-size: 16px;
-color: #2A2A2A;
-letter-spacing: 0;
-line-height: 24px;
+export const Row = styled.div`
+  display: flex;
+  justify-content: space-between;
+`;
+
+export const Label = styled.div`
+  font-family: dinRegular;
+  font-size: 16px;
+  color: #2a2a2a;
+  letter-spacing: 0;
+  line-height: 24px;
 `;
 
 export const Footer = styled.div`
   height: auto;
-  padding: 20px;
+  padding: 0px 20px 20px 20px;
+  width: auto;
 `;

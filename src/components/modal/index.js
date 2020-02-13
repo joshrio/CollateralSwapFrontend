@@ -12,7 +12,9 @@ import {
   Body,
   Fees,
   Label,
-  Detail
+  Bold,
+  Row,
+  Form
 } from "./styles";
 
 class Modal extends Component {
@@ -26,9 +28,16 @@ class Modal extends Component {
           </Description>
         </Header>
         <Body>
+          <Form>Form</Form>
           <Fees>
-            <Label>Fees</Label>
-            <Detail>Fees</Detail>
+            <Row>
+              <Bold>Fees</Bold>
+              <Bold>Details</Bold>
+            </Row>
+            <Row>
+              <Label>Transaction</Label>
+              <Label>0.0432</Label>
+            </Row>
           </Fees>
         </Body>
         <Footer>

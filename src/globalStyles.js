@@ -23,7 +23,6 @@ export const GlobalStyle = createGlobalStyle`
      src: url(${dinBold});
   }
 
-
   }
 
   }`;
