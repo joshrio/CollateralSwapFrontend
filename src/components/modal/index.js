@@ -16,6 +16,7 @@ import {
   Row,
   Form
 } from "./styles";
+import Dropdown from "../dropdown/index.js";
 
 class Modal extends Component {
   render() {
@@ -28,7 +29,11 @@ class Modal extends Component {
           </Description>
         </Header>
         <Body>
-          <Form>Form</Form>
+          <Form>
+            <Dropdown label="Platform" value="MakerDAO" />
+            <Dropdown label="Swap" value="BAT to ETH" />
+            <Dropdown label="Vault" value="#1234" />
+          </Form>
           <Fees>
             <Row>
               <Bold>Fees</Bold>
