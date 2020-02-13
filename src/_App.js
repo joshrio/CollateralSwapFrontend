@@ -7,11 +7,29 @@ import Web3NotEnabled from "./components/Web3NotEnabled";
 import Web3Enabled from "./components/Web3Enabled";
 
 import Information from "./components/Information";
+import { Grommet, Box, Heading } from "grommet";
+
+// return (
+//   <Grommet theme={theme}>
+//     <Box pad="medium" align="center">
+//       <Heading size="small" textAlign="center">
+//         Collateral Swap 🦺 (alpha)
+//       </Heading>
+//       <Information />
+//       {!window.ethereum ? (
+//         <Web3Unavailable />
+//       ) : web3 != null ? (
+//         <Web3Enabled web3={web3} account={account} />
+//       ) : (
+//         <Web3NotEnabled loadWeb3={loadWeb3} />
+//       )}
+//     </Box>
+//   </Grommet>
+// );
 
 // New Design
 
-import Background from "./components/layout";
-import Navigation from "./components/navigation";
+import Background from "./components/layout/index.js";
 
 const theme = {
   global: {
