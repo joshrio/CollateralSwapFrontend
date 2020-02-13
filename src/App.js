@@ -10,8 +10,9 @@ import Information from "./components/Information";
 
 // New Design
 
-import Page from "./components/layout";
+import Page from "./components/page";
 import Navigation from "./components/navigation";
+import Modal from "./components/modal";
 
 const theme = {
   global: {
@@ -55,9 +56,12 @@ const App = () => {
   };
 
   return (
-    <Page>
+    <>
       <Navigation />
-    </Page>
+      <Page>
+        <Modal />
+      </Page>
+    </>
   );
 };
 
