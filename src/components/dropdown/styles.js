@@ -65,7 +65,7 @@ export const Item = styled.li`
   margin-left: -40px;
   width: calc(100% + 8px);
   border-bottom: 1px solid purple;
-  font-family: Inter-Regular;
+  font-family: dinRegular;
   font-size: 16px;
   line-height: 26px;
   color: black;

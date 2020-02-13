@@ -15,6 +15,7 @@ export const Container = styled.div`
   color: #ffffff;
   letter-spacing: 0;
   line-height: 27px;
+  z-index: 1000;
 `;
 
 export const Button = styled.button`

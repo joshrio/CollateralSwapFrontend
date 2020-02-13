@@ -2,7 +2,7 @@
 import React, { Component } from "react";
 
 // Relative Imports
-import { Container } from "./styles.js";
+import { Container, First, Second } from "./styles.js";
 
 const Page = ({ children }) => {
   return <Container>{children}</Container>;
