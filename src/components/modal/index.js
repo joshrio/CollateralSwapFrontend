@@ -9,7 +9,10 @@ import {
   Description,
   Button,
   Footer,
-  Body
+  Body,
+  Fees,
+  Label,
+  Detail
 } from "./styles";
 
 class Modal extends Component {
@@ -22,7 +25,12 @@ class Modal extends Component {
             Instantly swap collateral across DeFi platforms.
           </Description>
         </Header>
-        <Body>Body</Body>
+        <Body>
+          <Fees>
+            <Label>Fees</Label>
+            <Detail>Fees</Detail>
+          </Fees>
+        </Body>
         <Footer>
           <Button>Swap</Button>
         </Footer>

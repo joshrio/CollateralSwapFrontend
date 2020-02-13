@@ -56,6 +56,29 @@ export const Button = styled.button`
   }
 `;
 
+export const Fees = styled.div`
+  height: auto;
+  background: pink;
+  display: flex;
+  align-items: space-between;
+`;
+
+export const Label = styled.div`
+  font-family: dinBold;
+  font-size: 16px;
+  color: #2a2a2a;
+  letter-spacing: 0;
+  line-height: 24px;
+`;
+
+export const Detail = styled.div`
+font-family: dinRegular'
+font-size: 16px;
+color: #2A2A2A;
+letter-spacing: 0;
+line-height: 24px;
+`;
+
 export const Footer = styled.div`
   height: auto;
   padding: 20px;
