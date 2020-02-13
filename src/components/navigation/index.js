@@ -2,12 +2,12 @@
 import React from "react";
 
 // Relative Imports
-import { Container, Button } from "./styles";
+import { Container, Button, Brand } from "./styles";
 
 const Navigation = () => {
   return (
     <Container>
-      <div>Collateral Swap</div>
+      <Brand>Collateral Swap</Brand>
       <Button>Connect Wallet</Button>
     </Container>
   );

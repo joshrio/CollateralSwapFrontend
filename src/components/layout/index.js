@@ -4,8 +4,8 @@ import React, { Component } from "react";
 // Relative Imports
 import { Container } from "./styles.js";
 
-const Background = ({ children }) => {
+const Page = ({ children }) => {
   return <Container>{children}</Container>;
 };
 
-export default Background;
+export default Page;

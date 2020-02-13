@@ -10,7 +10,7 @@ import Information from "./components/Information";
 
 // New Design
 
-import Background from "./components/layout";
+import Page from "./components/layout";
 import Navigation from "./components/navigation";
 
 const theme = {
@@ -55,9 +55,9 @@ const App = () => {
   };
 
   return (
-    <Background>
+    <Page>
       <Navigation />
-    </Background>
+    </Page>
   );
 };
 
