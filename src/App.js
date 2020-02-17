@@ -2,9 +2,9 @@ import React, { useEffect, useState } from "react";
 
 import { isWeb3Enabled, setupWeb3 } from "./controllers/Web3";
 
-import Web3Unavailable from "./components/Web3Unavailable";
-import Web3NotEnabled from "./components/Web3NotEnabled";
-import Web3Enabled from "./components/Web3Enabled";
+// import Web3Unavailable from "./components/Web3Unavailable";
+// import Web3NotEnabled from "./components/Web3NotEnabled";
+// import Web3Enabled from "./components/Web3Enabled";
 
 import Information from "./components/Information";
 

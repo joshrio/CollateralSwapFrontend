@@ -12,7 +12,6 @@ import {
   Row,
   Label
 } from "./styles";
-// import { Label, Error } from "../../../../assets/styles/type.js";
 
 class Dropdown extends React.Component {
   state = {
@@ -36,12 +35,12 @@ class Dropdown extends React.Component {
   renderOptions = () => {
     const { onClick, options } = this.props;
     return options.map(option => {
-      const { name, ticker } = option;
+      const { name, status } = option;
       return (
         <Item key={name} onClick={() => onClick(option)}>
           <Row>
             <Name>{name}</Name>
-            {ticker ? <Ticker>{ticker}</Ticker> : null}
+            {status && <Ticker>{status}</Ticker>}
           </Row>
         </Item>
       );
@@ -50,7 +49,7 @@ class Dropdown extends React.Component {
 
   render() {
     const { displayMenu } = this.state;
-    const { label, error, placeholder, value, ticker, width } = this.props;
+    const { label, error, placeholder, value, status, width } = this.props;
 
     return (
       <Container>
@@ -65,7 +64,7 @@ class Dropdown extends React.Component {
             ) : (
               <Row>
                 <Name>{value}</Name>
-                <Ticker>{ticker}</Ticker>
+                <Ticker>{status}</Ticker>
               </Row>
             )}
           </Button>

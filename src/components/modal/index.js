@@ -18,8 +18,85 @@ import {
 } from "./styles";
 import Dropdown from "../dropdown/index.js";
 
+const platforms = [
+  {
+    name: "MakerDAO",
+    status: "Available"
+  },
+  {
+    name: "Synthetix",
+    status: "Coming Soon"
+  },
+  {
+    name: "DyDx",
+    status: "Coming Soon"
+  }
+];
+
+const collateral = [
+  {
+    name: "ETH to BAT"
+  },
+  {
+    name: "BAT to ETH"
+  }
+];
+
+const vaults = [
+  {
+    name: "1234"
+  },
+  {
+    name: "5678"
+  },
+  {
+    name: "9876"
+  }
+];
+
 class Modal extends Component {
+  state = {
+    platform: {
+      value: "MakerDAO",
+      status: "Available"
+    },
+    collateral: {
+      value: "Swap Collateral"
+    },
+    vaults: {
+      value: "Select Vault"
+    }
+  };
+
+  selectPlatform = option => {
+    const { name, status } = option;
+    const { platform } = this.state;
+
+    this.setState({
+      platform: { ...platform, value: name }
+    });
+  };
+
+  selectCollateral = option => {
+    const { name } = option;
+    const collateral = this.state;
+
+    this.setState({
+      collateral: { ...collateral, value: name }
+    });
+  };
+
+  selectVault = option => {
+    const { name } = option;
+    const vaults = this.state;
+
+    this.setState({
+      vaults: { ...vaults, value: name }
+    });
+  };
+
   render() {
+    console.log("STATE", this.state.platform.value);
     return (
       <Container>
         <Header>
@@ -30,9 +107,24 @@ class Modal extends Component {
         </Header>
         <Body>
           <Form>
-            <Dropdown label="Platform" value="MakerDAO" />
-            <Dropdown label="Swap" value="BAT to ETH" />
-            <Dropdown label="Vault" value="#1234" />
+            <Dropdown
+              options={platforms}
+              onClick={this.selectPlatform}
+              label="Platform"
+              value={this.state.platform.value}
+            />
+            <Dropdown
+              options={collateral}
+              label="Swap"
+              onClick={this.selectCollateral}
+              value={this.state.collateral.value}
+            />
+            <Dropdown
+              options={vaults}
+              label="Vault"
+              onClick={this.selectVault}
+              value={this.state.vaults.value}
+            />
           </Form>
           <Fees>
             <Row>
@@ -46,7 +138,7 @@ class Modal extends Component {
           </Fees>
         </Body>
         <Footer>
-          <Button>Swap</Button>
+          <Button>Swap Collateral</Button>
         </Footer>
       </Container>
     );

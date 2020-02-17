@@ -39,8 +39,8 @@ export const Wrapper = styled.ul`
   border-radius: 4px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
-  background: palegreen;
-  border: 1px solid lavender;
+  background: #f9f9f9;
+  border: 1px solid #f9f9f9;
   overflow: auto;
 `;
 
@@ -64,17 +64,18 @@ export const Item = styled.li`
   padding: 16px;
   margin-left: -40px;
   width: calc(100% + 8px);
-  border-bottom: 1px solid purple;
+  border-bottom: 1px solid #ccc;
   font-family: dinRegular;
   font-size: 16px;
   line-height: 26px;
   color: black;
   font-weight: regular;
   cursor: pointer;
+  background: #fafafa;
 
   &:hover {
     cursor: pointer;
-    background: red;
+    background: #fff;
   }
 
   &:last-child {
@@ -85,6 +86,7 @@ export const Item = styled.li`
 export const Row = styled.div`
   display: flex;
   align-items: center;
+  justify-content: space-between;
 `;
 
 export const Ticker = styled.div`
