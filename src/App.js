@@ -12,22 +12,32 @@ import Modal from "./components/modal";
 // Modal States
 import SwapForm from "./components/states/swap_form";
 import ConnectWallet from "./components/states/connect_wallet";
+import ConfirmTransaction from "./components/states/confirm_transaction";
+import SwappingCollateral from "./components/states/swapping_collateral";
+import SwappedCollateral from "./components/states/swapped_collateral";
 
 class App extends Component {
   state = {
     step: {
-      count: 1,
+      count: 5,
       button: "Connect Wallet",
       status: "Enabled"
     }
   };
 
   handleState = () => {
-    switch (this.state.step.count) {
+    const { count } = this.state.step;
+    switch (count) {
       case 1:
         return <ConnectWallet />;
       case 2:
         return <SwapForm />;
+      case 3:
+        return <ConfirmTransaction />;
+      case 4:
+        return <SwappingCollateral />;
+      case 5:
+        return <SwappedCollateral />;
         break;
       default:
     }
