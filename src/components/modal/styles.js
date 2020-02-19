@@ -50,9 +50,13 @@ export const Button = styled.button`
   font-size: 18px;
   padding-top: 8px;
   border: none;
+  outline: none;
+  transition: 1s;
 
   &:hover {
     cursor: pointer;
+    transition: 1s;
+    background: #0e6a7f;
   }
 `;
 

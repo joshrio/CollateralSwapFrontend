@@ -27,12 +27,13 @@ export const Button = styled.button`
   font-family: dinRegular;
   font-size: 16px;
   padding-top: -2px;
-  animation: 1000ms;
+  transition: 1s;
+  outline: none;
 
   &:hover {
-    background: #066a7f;
     cursor: pointer;
-    animation: 1000ms;
+    transition: 1s;
+    background: #0e6a7f;
   }
 `;
 
