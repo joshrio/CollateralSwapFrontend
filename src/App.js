@@ -52,13 +52,13 @@ class App extends Component {
       case 2:
         return this.setState({
           count: 3,
-          button: "Confirm Transaction",
+          button: "Confirm Transaction...",
           status: "enabled"
         });
       case 3:
         return this.setState({
           count: 4,
-          button: "Transaction Confirming",
+          button: "Transaction Confirming...",
           status: "enabled"
         });
       case 4:
