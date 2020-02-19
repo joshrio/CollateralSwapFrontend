@@ -16,7 +16,7 @@ import {
   Row,
   Form
 } from "./styles";
-import Dropdown from "../dropdown/index.js";
+import Dropdown from "../../dropdown/index.js";
 
 const platforms = [
   {
@@ -54,7 +54,7 @@ const vaults = [
   }
 ];
 
-class Modal extends Component {
+class SwapForm extends Component {
   state = {
     platform: {
       value: "MakerDAO",
@@ -97,51 +97,40 @@ class Modal extends Component {
 
   render() {
     return (
-      <Container>
-        <Header>
-          <Title>Collateral Swap</Title>
-          <Description>
-            Instantly swap collateral across DeFi platforms.
-          </Description>
-        </Header>
-        <Body>
-          <Form>
-            <Dropdown
-              options={platforms}
-              onClick={this.selectPlatform}
-              label="Platform"
-              value={this.state.platform.value}
-            />
-            <Dropdown
-              options={collateral}
-              label="Swap"
-              onClick={this.selectCollateral}
-              value={this.state.collateral.value}
-            />
-            <Dropdown
-              options={vaults}
-              label="Vault"
-              onClick={this.selectVault}
-              value={this.state.vaults.value}
-            />
-          </Form>
-          <Fees>
-            <Row>
-              <Bold>Fees</Bold>
-              <Bold>Details</Bold>
-            </Row>
-            <Row>
-              <Label>Transaction</Label>
-              <Label>0.0432</Label>
-            </Row>
-          </Fees>
-        </Body>
-        <Footer>
-          <Button>{this.props.button}</Button>
-        </Footer>
-      </Container>
+      <Body>
+        <Form>
+          <Dropdown
+            options={platforms}
+            onClick={this.selectPlatform}
+            label="Platform"
+            value={this.state.platform.value}
+          />
+          <Dropdown
+            options={collateral}
+            label="Swap"
+            onClick={this.selectCollateral}
+            value={this.state.collateral.value}
+          />
+          <Dropdown
+            options={vaults}
+            label="Vault"
+            onClick={this.selectVault}
+            value={this.state.vaults.value}
+          />
+        </Form>
+        <Fees>
+          <Row>
+            <Bold>Fees</Bold>
+            <Bold>Details</Bold>
+          </Row>
+          <Row>
+            <Label>Transaction</Label>
+            <Label>0.0432</Label>
+          </Row>
+        </Fees>
+      </Body>
     );
   }
 }
 
-export default Modal;
+export default SwapForm;

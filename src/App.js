@@ -14,6 +14,9 @@ import Page from "./components/page";
 import Navigation from "./components/navigation";
 import Modal from "./components/modal";
 
+// Modal States
+import SwapForm from "./components/states/swap_form";
+
 const theme = {
   global: {
     font: {
@@ -59,7 +62,9 @@ const App = () => {
     <>
       <Navigation />
       <Page>
-        <Modal />
+        <Modal button="hello">
+          <SwapForm />
+        </Modal>
       </Page>
     </>
   );
