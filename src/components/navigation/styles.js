@@ -29,6 +29,7 @@ export const Button = styled.button`
   padding-top: -2px;
   transition: 1s;
   outline: none;
+  width: auto;
 
   &:hover {
     cursor: pointer;

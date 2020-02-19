@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Body = styled.div`
-  height: 360px;
+  min-height: 360px;
   padding: 20px;
   display: flex;
   height: 100%;

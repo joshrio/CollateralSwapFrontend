@@ -18,7 +18,7 @@ class Navigation extends Component {
     const { wallet, connected } = this.state;
     return (
       <Container>
-        <Brand>Collateral Swap</Brand>
+        <Brand>CS</Brand>
         <Button onClick={this.handleConnect}>
           {connected ? wallet : "Connect Wallet"}
         </Button>
