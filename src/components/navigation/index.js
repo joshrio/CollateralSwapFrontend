@@ -14,7 +14,6 @@ class Navigation extends Component {
     alert("Trigger Metamask Window");
   };
 
-  status = {};
   render() {
     const { wallet, connected } = this.state;
     return (
