@@ -16,86 +16,10 @@ import {
   Row,
   Form
 } from "./styles";
-import Dropdown from "../dropdown/index.js";
-
-const platforms = [
-  {
-    name: "MakerDAO",
-    status: "Available"
-  },
-  {
-    name: "Synthetix",
-    status: "Coming Soon"
-  },
-  {
-    name: "DyDx",
-    status: "Coming Soon"
-  }
-];
-
-const collateral = [
-  {
-    name: "ETH to BAT"
-  },
-  {
-    name: "BAT to ETH"
-  }
-];
-
-const vaults = [
-  {
-    name: "1234"
-  },
-  {
-    name: "5678"
-  },
-  {
-    name: "9876"
-  }
-];
 
 class Modal extends Component {
-  state = {
-    platform: {
-      value: "MakerDAO",
-      status: "Available"
-    },
-    collateral: {
-      value: "Swap Collateral"
-    },
-    vaults: {
-      value: "Select Vault"
-    }
-  };
-
-  selectPlatform = option => {
-    const { name, status } = option;
-    const { platform } = this.state;
-
-    this.setState({
-      platform: { ...platform, value: name }
-    });
-  };
-
-  selectCollateral = option => {
-    const { name } = option;
-    const collateral = this.state;
-
-    this.setState({
-      collateral: { ...collateral, value: name }
-    });
-  };
-
-  selectVault = option => {
-    const { name } = option;
-    const vaults = this.state;
-
-    this.setState({
-      vaults: { ...vaults, value: name }
-    });
-  };
-
   render() {
+    const { onClick, children, button } = this.props;
     return (
       <Container>
         <Header>
@@ -104,9 +28,9 @@ class Modal extends Component {
             Instantly swap collateral across DeFi platforms.
           </Description>
         </Header>
-        <Body>{this.props.children}</Body>
+        <Body>{children}</Body>
         <Footer>
-          <Button>{this.props.button}</Button>
+          <Button onClick={onClick}>{button}</Button>
         </Footer>
       </Container>
     );

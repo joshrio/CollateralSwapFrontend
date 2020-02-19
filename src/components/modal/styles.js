@@ -58,6 +58,11 @@ export const Button = styled.button`
     transition: 1s;
     background: #0e6a7f;
   }
+
+  &:disabled {
+    color: rgba(255, 255, 255, 0.5);
+    cursor: not-allowed;
+  }
 `;
 
 export const Form = styled.form`

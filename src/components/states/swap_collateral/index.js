@@ -65,6 +65,9 @@ class SwappingCollateral extends Component {
     },
     vaults: {
       value: "Select Vault"
+    },
+    form: {
+      valid: true
     }
   };
 
@@ -126,6 +129,10 @@ class SwappingCollateral extends Component {
           <Row>
             <Label>Transaction</Label>
             <Label>0.0432</Label>
+          </Row>
+          <Row>
+            <Label>Fee</Label>
+            <Label>0.0123</Label>
           </Row>
         </Fees>
       </Body>

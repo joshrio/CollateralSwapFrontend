@@ -55,6 +55,11 @@ export const Button = styled.button`
   &:hover {
     cursor: pointer;
   }
+
+  &:disabled {
+    color: rgba(255, 255, 255, 0.5);
+    cursor: not-allowed;
+  }
 `;
 
 export const Form = styled.form`
@@ -62,7 +67,6 @@ export const Form = styled.form`
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: 100%;
 `;
 
 export const Fees = styled.div`

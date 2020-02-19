@@ -19,15 +19,14 @@ import SwappedCollateral from "./components/states/swapped_collateral";
 
 class App extends Component {
   state = {
-    step: {
-      count: 2,
-      button: "Connect Wallet",
-      status: "Enabled"
-    }
+    count: 1,
+    button: "Connect Wallet",
+    connected: true,
+    status: "Enabled"
   };
 
   handleState = () => {
-    const { count } = this.state.step;
+    const { count } = this.state;
     switch (count) {
       case 1:
         return <ConnectWallet />;
@@ -43,12 +42,64 @@ class App extends Component {
       default:
     }
   };
+
+  handleButton = () => {
+    const { count, connected } = this.state;
+    switch (count) {
+      case 1:
+        return this.setState({
+          count: 2,
+          button: "Swap Collateral"
+        });
+      case 2:
+        return this.setState({
+          count: 3,
+          button: "Confirm Transaction"
+        });
+      case 3:
+        return this.setState({
+          count: 4,
+          button: "Transaction Confirming"
+        });
+      case 4:
+        return this.setState({
+          count: 5,
+          button: "Swap Again"
+        });
+      case 5:
+        return this.swapAgain();
+        break;
+      default:
+    }
+  };
+
+  swapAgain = () => {
+    const { connected } = this.state;
+    if (connected) {
+      this.setState({
+        count: 2,
+        button: "Swap Collateral"
+      });
+    } else if (!connected) {
+      this.setState({
+        count: 1,
+        button: "Connect Wallet"
+      });
+    } else {
+      return null;
+    }
+  };
+
   render() {
+    const { button, status } = this.state;
+
     return (
       <>
         <Navigation />
         <Page>
-          <Modal button="Swap Collateral">{this.handleState()}</Modal>
+          <Modal onClick={this.handleButton} button={button} status={status}>
+            {this.handleState()}
+          </Modal>
         </Page>
       </>
     );
