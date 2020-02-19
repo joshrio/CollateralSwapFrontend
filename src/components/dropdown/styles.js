@@ -74,6 +74,11 @@ export const Item = styled.li`
   background: #ffffff;
   transition: 1s;
 
+  &:disabled {
+    cursor: not-allowed;
+    background: red;
+  }
+
   &:hover {
     cursor: pointer;
     background: #eaeaea;
@@ -89,11 +94,19 @@ export const Row = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  &:disabled {
+    background: red;
+  }
 `;
 
 export const Ticker = styled.div`
-  color: black;
+  color: rgba(255, 255, 255, 0.5);
   margin-left: 12px;
+  font-size: 13px;
+  background: #07849f;
+  padding: 2px 8px;
+  border-radius: 3px;
 `;
 
 export const Name = styled.div`
@@ -114,8 +127,8 @@ export const Button = styled.button`
     align-items: flex-start;
     border: none;
     cursor: pointer;
-
-
+    font-family: dinRegular;
+    maring-top: 3px;
 
 &:before{
     content:"";

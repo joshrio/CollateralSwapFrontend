@@ -59,14 +59,9 @@ class Dropdown extends React.Component {
         </Labels>
         <Select>
           <Button onClick={this.showDropdownMenu}>
-            {value === "Select Asset" ? (
-              placeholder
-            ) : (
-              <Row>
-                <Name>{value}</Name>
-                <Ticker>{status}</Ticker>
-              </Row>
-            )}
+            <Row>
+              <Name>{value}</Name>
+            </Row>
           </Button>
           {displayMenu && <Wrapper>{this.renderOptions()}</Wrapper>}
         </Select>
