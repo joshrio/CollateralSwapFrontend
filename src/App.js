@@ -19,7 +19,7 @@ import SwappedCollateral from "./components/states/swapped_collateral";
 class App extends Component {
   state = {
     step: {
-      count: 5,
+      count: 1,
       button: "Connect Wallet",
       status: "Enabled"
     }

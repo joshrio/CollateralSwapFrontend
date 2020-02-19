@@ -35,7 +35,6 @@ export const Description = styled.div`
 
 export const Body = styled.div`
   height: 360px;
-  background: palegreen;
   display: flex;
   height: 100%;
   flex-direction: column;

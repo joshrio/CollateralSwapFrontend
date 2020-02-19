@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 export const Body = styled.div`
   height: 360px;
-  background: yellow;
   padding: 20px;
   display: flex;
   height: 100%;
@@ -13,13 +12,11 @@ export const Body = styled.div`
 export const Image = styled.img`
   height: auto;
   width: auto;
-  background: pink;
 `;
 
 export const Column = styled.div`
   display: flex;
   flex-direction: column;
-  background: lavender;
   width: auto;
   justify-content: center;
 `;
