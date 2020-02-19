@@ -19,7 +19,8 @@ import {
 
 class Modal extends Component {
   render() {
-    const { onClick, children, button } = this.props;
+    const { onClick, children, button, status } = this.props;
+
     return (
       <Container>
         <Header>
@@ -30,7 +31,13 @@ class Modal extends Component {
         </Header>
         <Body>{children}</Body>
         <Footer>
-          <Button onClick={onClick}>{button}</Button>
+          {status === "enabled" ? (
+            <Button onClick={onClick}>{button}</Button>
+          ) : (
+            <Button disabled onClick={onClick}>
+              {button}
+            </Button>
+          )}
         </Footer>
       </Container>
     );

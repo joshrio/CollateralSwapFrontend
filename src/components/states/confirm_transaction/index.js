@@ -16,7 +16,7 @@ class ConfirmTransaction extends Component {
             <Title>Confirm Transaction</Title>
             <Description>
               To finalize this transaction please confirm the transaction within
-              Metamask. If a window doesn’t appear select it from the browser
+              Metamask. If a window doesn’t appear, select it from the browser
               window.
             </Description>
           </Column>

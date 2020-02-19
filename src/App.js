@@ -1,8 +1,5 @@
 import React, { Component, useEffect, useState } from "react";
-
 import { isWeb3Enabled, setupWeb3 } from "./controllers/Web3";
-
-import Information from "./components/Information";
 
 // New Design
 import Page from "./components/page";
@@ -20,9 +17,9 @@ import SwappedCollateral from "./components/states/swapped_collateral";
 class App extends Component {
   state = {
     count: 1,
-    button: "Connect Wallet",
     connected: true,
-    status: "Enabled"
+    status: "enabled",
+    button: "Connect Wallet"
   };
 
   handleState = () => {
@@ -49,22 +46,26 @@ class App extends Component {
       case 1:
         return this.setState({
           count: 2,
-          button: "Swap Collateral"
+          button: "Swap Collateral",
+          status: "enabled"
         });
       case 2:
         return this.setState({
           count: 3,
-          button: "Confirm Transaction"
+          button: "Confirm Transaction",
+          status: "enabled"
         });
       case 3:
         return this.setState({
           count: 4,
-          button: "Transaction Confirming"
+          button: "Transaction Confirming",
+          status: "enabled"
         });
       case 4:
         return this.setState({
           count: 5,
-          button: "Swap Again"
+          button: "Swap Again",
+          status: "enabled"
         });
       case 5:
         return this.swapAgain();
