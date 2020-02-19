@@ -104,38 +104,7 @@ class Modal extends Component {
             Instantly swap collateral across DeFi platforms.
           </Description>
         </Header>
-        <Body>
-          <Form>
-            <Dropdown
-              options={platforms}
-              onClick={this.selectPlatform}
-              label="Platform"
-              value={this.state.platform.value}
-            />
-            <Dropdown
-              options={collateral}
-              label="Swap"
-              onClick={this.selectCollateral}
-              value={this.state.collateral.value}
-            />
-            <Dropdown
-              options={vaults}
-              label="Vault"
-              onClick={this.selectVault}
-              value={this.state.vaults.value}
-            />
-          </Form>
-          <Fees>
-            <Row>
-              <Bold>Fees</Bold>
-              <Bold>Details</Bold>
-            </Row>
-            <Row>
-              <Label>Transaction</Label>
-              <Label>0.0432</Label>
-            </Row>
-          </Fees>
-        </Body>
+        <Body>{this.props.children}</Body>
         <Footer>
           <Button>{this.props.button}</Button>
         </Footer>
