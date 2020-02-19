@@ -8,6 +8,7 @@ import { isWeb3Enabled, setupWeb3 } from "../../controllers/Web3.js";
 
 // Relative Imports
 import { Container, First, Second } from "./styles.js";
+import Error from "../error/index.js";
 
 const Page = ({ children }) => {
   let [web3, setWeb3] = useState(null);
@@ -39,7 +40,15 @@ const Page = ({ children }) => {
       console.error(`Failed to load web3, accounts, or contract: ${e.message}`);
     }
   };
-  return <Container>{children}</Container>;
+  const error = false;
+  return (
+    <Container>
+      {children}
+      {error && (
+        <Error message="It looks like you’re on Rinkeby Network. Please change to Mainnet to continue." />
+      )}
+    </Container>
+  );
 };
 
 export default Page;

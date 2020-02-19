@@ -6,10 +6,12 @@ export const Container = styled.div`
   background: #f9f9f9;
   background-image: url(${pattern_light});
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 100%;
   height: calc(100vh - 74px);
+  overflow: scroll;
 `;
 
 export const First = styled.div`

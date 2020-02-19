@@ -8,6 +8,7 @@ import Information from "./components/Information";
 import Page from "./components/page";
 import Navigation from "./components/navigation";
 import Modal from "./components/modal";
+import Error from "./components/error";
 
 // Modal States
 import SwapCollateral from "./components/states/swap_collateral";
