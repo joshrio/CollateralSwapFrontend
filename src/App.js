@@ -10,7 +10,7 @@ import Navigation from "./components/navigation";
 import Modal from "./components/modal";
 
 // Modal States
-import SwapForm from "./components/states/swap_form";
+import SwapCollateral from "./components/states/swap_collateral";
 import ConnectWallet from "./components/states/connect_wallet";
 import ConfirmTransaction from "./components/states/confirm_transaction";
 import SwappingCollateral from "./components/states/swapping_collateral";
@@ -31,7 +31,7 @@ class App extends Component {
       case 1:
         return <ConnectWallet />;
       case 2:
-        return <SwapForm />;
+        return <SwapCollateral />;
       case 3:
         return <ConfirmTransaction />;
       case 4:

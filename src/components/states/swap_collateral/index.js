@@ -54,7 +54,7 @@ const vaults = [
   }
 ];
 
-class SwapForm extends Component {
+class SwappingCollateral extends Component {
   state = {
     platform: {
       value: "MakerDAO",
@@ -133,4 +133,4 @@ class SwapForm extends Component {
   }
 }
 
-export default SwapForm;
+export default SwappingCollateral;
