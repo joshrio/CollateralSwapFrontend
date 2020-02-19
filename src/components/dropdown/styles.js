@@ -40,7 +40,7 @@ export const Wrapper = styled.ul`
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
   background: #f9f9f9;
-  border: 1px solid #f9f9f9;
+  border: 1px solid #c9c9c9;
   overflow: auto;
 `;
 
@@ -64,18 +64,20 @@ export const Item = styled.li`
   padding: 16px;
   margin-left: -40px;
   width: calc(100% + 8px);
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid #eaeaea;
   font-family: dinRegular;
   font-size: 16px;
   line-height: 26px;
   color: black;
   font-weight: regular;
   cursor: pointer;
-  background: #fafafa;
+  background: #ffffff;
+  transition: 1s;
 
   &:hover {
     cursor: pointer;
-    background: #fff;
+    background: #eaeaea;
+    transition: 1s;
   }
 
   &:last-child {
