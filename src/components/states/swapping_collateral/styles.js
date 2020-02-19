@@ -47,3 +47,7 @@ export const Description = styled.div`
   line-height: 24px;
   text-align: center;
 `;
+
+export const Link = styled.a`
+  color: red;
+`;

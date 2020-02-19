@@ -47,3 +47,18 @@ export const Description = styled.div`
   line-height: 24px;
   text-align: center;
 `;
+
+export const Link = styled.a`
+  font-family: dinRegular;
+  font-size: 16px;
+  color: #12849f;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-align: center;
+  transition: 1s;
+
+  &:hover {
+    color: #0d5c6f;
+    transition: 1s;
+  }
+`;
