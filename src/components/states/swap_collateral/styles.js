@@ -35,7 +35,6 @@ export const Description = styled.div`
 
 export const Body = styled.div`
   height: 360px;
-  background: pink;
   padding: 20px;
   display: flex;
   height: 100%;
