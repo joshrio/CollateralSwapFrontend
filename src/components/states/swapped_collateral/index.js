@@ -11,7 +11,6 @@ import {
   Image,
   Link
 } from "./styles";
-import Dropdown from "../../dropdown/index.js";
 import swapped_collateral from "../../../assets/illustrations/swapped.svg";
 
 class SwappingCollateral extends Component {

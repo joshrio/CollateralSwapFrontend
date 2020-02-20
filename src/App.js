@@ -1,11 +1,9 @@
-import React, { Component, useEffect, useState } from "react";
-import { isWeb3Enabled, setupWeb3 } from "./controllers/Web3";
+import React, { Component } from "react";
 
 // New Design
 import Page from "./components/page";
 import Navigation from "./components/navigation";
 import Modal from "./components/modal";
-import Error from "./components/error";
 
 // Modal States
 import SwapCollateral from "./components/states/swap_collateral";
@@ -35,13 +33,12 @@ class App extends Component {
         return <SwappingCollateral />;
       case 5:
         return <SwappedCollateral />;
-        break;
       default:
     }
   };
 
   handleButton = () => {
-    const { count, connected } = this.state;
+    const { count } = this.state;
     switch (count) {
       case 1:
         return this.setState({
@@ -69,7 +66,6 @@ class App extends Component {
         });
       case 5:
         return this.swapAgain();
-        break;
       default:
     }
   };

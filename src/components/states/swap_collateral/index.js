@@ -2,20 +2,7 @@
 import React, { Component } from "react";
 
 // Relative Imports
-import {
-  Container,
-  Header,
-  Title,
-  Description,
-  Button,
-  Footer,
-  Body,
-  Fees,
-  Label,
-  Bold,
-  Row,
-  Form
-} from "./styles";
+import { Body, Fees, Label, Bold, Row, Form } from "./styles";
 import Dropdown from "../../dropdown/index.js";
 
 const platforms = [
@@ -72,7 +59,7 @@ class SwappingCollateral extends Component {
   };
 
   selectPlatform = option => {
-    const { name, status } = option;
+    const { name } = option;
     const { platform } = this.state;
 
     this.setState({

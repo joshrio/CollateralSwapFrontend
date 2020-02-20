@@ -3,7 +3,6 @@ import React, { Component } from "react";
 
 // Relative Imports
 import { Body, Microcopy, Column, Title, Description, Image } from "./styles";
-import Dropdown from "../../dropdown/index.js";
 import connect_wallet from "../../../assets/illustrations/connect.svg";
 
 class ConnectWallet extends Component {

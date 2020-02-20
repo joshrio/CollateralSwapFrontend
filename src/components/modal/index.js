@@ -9,12 +9,7 @@ import {
   Description,
   Button,
   Footer,
-  Body,
-  Fees,
-  Label,
-  Bold,
-  Row,
-  Form
+  Body
 } from "./styles";
 
 class Modal extends Component {

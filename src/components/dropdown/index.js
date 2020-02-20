@@ -49,7 +49,7 @@ class Dropdown extends React.Component {
 
   render() {
     const { displayMenu } = this.state;
-    const { label, error, placeholder, value, status, width } = this.props;
+    const { label, error, value } = this.props;
 
     return (
       <Container>

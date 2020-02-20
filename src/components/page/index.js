@@ -1,5 +1,5 @@
 // Library Imports
-import React, { Component, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import { isWeb3Enabled, setupWeb3 } from "../../controllers/Web3.js";
 // import Web3Unavailable from "./components/Web3Unavailable";
@@ -7,12 +7,12 @@ import { isWeb3Enabled, setupWeb3 } from "../../controllers/Web3.js";
 // import Web3Enabled from "./components/Web3Enabled";
 
 // Relative Imports
-import { Container, First, Second } from "./styles.js";
+import { Container } from "./styles.js";
 import Error from "../error/index.js";
 
 const Page = ({ children }) => {
-  let [web3, setWeb3] = useState(null);
-  let [account, setAccount] = useState(null);
+  let [setWeb3] = useState(null);
+  let [setAccount] = useState(null);
   let [initalised, setInitalised] = useState(0);
 
   useEffect(

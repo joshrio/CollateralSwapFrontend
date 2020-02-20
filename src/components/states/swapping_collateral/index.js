@@ -3,7 +3,6 @@ import React, { Component } from "react";
 
 // Relative Imports
 import { Body, Microcopy, Column, Title, Description, Image } from "./styles";
-import Dropdown from "../../dropdown/index.js";
 import swapping_collateral from "../../../assets/illustrations/swapping.svg";
 
 class SwappingCollateral extends Component {
