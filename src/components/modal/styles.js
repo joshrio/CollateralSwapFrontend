@@ -51,7 +51,7 @@ export const Button = styled.button`
   height: 52px;
   width: 100%;
   color: white;
-  font-family: dinBold;
+  font-family: dinRegular;
   font-size: 18px;
   padding-top: 8px;
   border: none;
