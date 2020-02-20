@@ -37,7 +37,17 @@ class App extends Component {
     }
   };
 
+  connectWallet = () => {
+    // Function  to connect the wallet and increment the count
+    alert("Force Metamask Modal to appear here");
+    this.setState({
+      count: this.state.count + 1,
+      button: "Swap Collateral"
+    });
+  };
+
   handleButton = () => {
+    // Switch Statement to handle the display of component states
     const { count } = this.state;
     switch (count) {
       case 1:
@@ -56,7 +66,7 @@ class App extends Component {
         return this.setState({
           count: 4,
           button: "Transaction Confirming...",
-          status: "enabled"
+          status: "disabled"
         });
       case 4:
         return this.setState({
@@ -65,12 +75,14 @@ class App extends Component {
           status: "enabled"
         });
       case 5:
+        // Function to provide logic to redirect a user to start point
         return this.swapAgain();
       default:
     }
   };
 
   swapAgain = () => {
+    // If the wallet is connected take the user to step 2 else step 1
     const { connected } = this.state;
     if (connected) {
       this.setState({
@@ -88,13 +100,22 @@ class App extends Component {
   };
 
   render() {
-    const { button, status } = this.state;
+    const { button, status, count, connected } = this.state;
 
     return (
       <>
         <Navigation />
         <Page>
-          <Modal onClick={this.handleButton} button={button} status={status}>
+          <Modal
+            onClick={() => {
+              // Ternary  to handle connectWallet and count increment
+              count === 1 ? this.connectWallet() : this.handleButton();
+            }}
+            button={button}
+            status={status}
+            count={count}
+            connected={connected}
+          >
             {this.handleState()}
           </Modal>
         </Page>

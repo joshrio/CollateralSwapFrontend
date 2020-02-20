@@ -14,7 +14,15 @@ import {
 
 class Modal extends Component {
   render() {
-    const { onClick, children, button, status } = this.props;
+    const {
+      onClick,
+      children,
+      button,
+      status,
+      count,
+      connected,
+      connectWallet
+    } = this.props;
 
     return (
       <Container>
