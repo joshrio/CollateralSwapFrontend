@@ -24,12 +24,12 @@ class SwappingCollateral extends Component {
             <Description>
               The swap transaction has finished. To view the changes, view and
               refresh your vault within{" "}
-              <Link target="__blank" href="https://oasis.app/borrow/5678">
+              <Link target="_blank" href="https://oasis.app/borrow/5678">
                 Oasis
               </Link>{" "}
               or review the transaction in{" "}
               <Link
-                target="__blank"
+                target="_blank"
                 href="https://etherscan.io/tx/0x015f31d9ea94dba5fcf8aa4181c303298fc9c2d8367aa9f3584872967e8833c9"
               >
                 Etherscan
