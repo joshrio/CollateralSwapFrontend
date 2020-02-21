@@ -46,10 +46,34 @@ class App extends Component {
     });
   };
 
-  handleConfirmation = () => {
+  swapCollateral = () => {
+    this.setState({
+      count: 2,
+      button: "Swap Collateral",
+      status: "enabled"
+    });
+  };
+
+  confirmTransaction = () => {
     this.setState({
       count: 3,
       button: "Confirm Transaction...",
+      status: "disabled"
+    });
+  };
+
+  swappingCollateral = () => {
+    this.setState({
+      count: 4,
+      button: "Transaction Confirming...",
+      status: "disabled"
+    });
+  };
+
+  swappedCollateral = () => {
+    this.setState({
+      count: 5,
+      button: "Swap Again",
       status: "enabled"
     });
   };
@@ -59,28 +83,14 @@ class App extends Component {
     const { count } = this.state;
     switch (count) {
       case 1:
-        return this.setState({
-          count: 2,
-          button: "Swap Collateral",
-          status: "enabled"
-        });
+        return this.swapCollateral();
       case 2:
-        return this.handleConfirmation();
-
+        return this.confirmTransaction();
       case 3:
-        return this.setState({
-          count: 4,
-          button: "Transaction Confirming...",
-          status: "disabled"
-        });
+        return this.swappingCollateral();
       case 4:
-        return this.setState({
-          count: 5,
-          button: "Swap Again",
-          status: "enabled"
-        });
+        return this.swappedCollateral();
       case 5:
-        // Function to provide logic to redirect a user to start point
         return this.swapAgain();
       default:
     }
