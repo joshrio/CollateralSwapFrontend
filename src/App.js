@@ -60,6 +60,12 @@ class App extends Component {
       button: "Confirm Transaction...",
       status: "disabled"
     });
+    // Once confirmed reset the state
+    // this.setState({
+    //   count: 4,
+    //   button: "Transaction Confirming...",
+    //   status: "disabled"
+    // });
   };
 
   swappingCollateral = () => {
@@ -68,6 +74,12 @@ class App extends Component {
       button: "Transaction Confirming...",
       status: "disabled"
     });
+    // Once confirmed reset the state
+    // this.setState({
+    //   count: 5,
+    //   button: "Swap Again",
+    //   status: "enabled"
+    // });
   };
 
   swappedCollateral = () => {
