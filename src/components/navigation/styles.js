@@ -15,6 +15,10 @@ export const Container = styled.div`
   color: #ffffff;
   letter-spacing: 0;
   line-height: 27px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
   z-index: 1000;
 `;
 
@@ -38,12 +42,8 @@ export const Button = styled.button`
   }
 `;
 
-export const Brand = styled.div`
-  font-family: dinBold;
-  font-size: 20px;
-  color: #ffffff;
-  letter-spacing: 0;
-  line-height: 42px;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.06);
-  text-transform: uppercase;
+export const Brand = styled.img`
+  height: 44px;
+  width: 44px;
+  padding-top: 2px;
 `;

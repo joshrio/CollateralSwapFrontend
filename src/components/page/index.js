@@ -7,7 +7,7 @@ import { isWeb3Enabled, setupWeb3 } from "../../controllers/Web3.js";
 // import Web3Enabled from "./components/Web3Enabled";
 
 // Relative Imports
-import { Container } from "./styles.js";
+import { Container, First, Second } from "./styles.js";
 import Error from "../error/index.js";
 
 const Page = ({ children }) => {
@@ -43,10 +43,12 @@ const Page = ({ children }) => {
   const error = false;
   return (
     <Container>
+      <First />
       {children}
       {error && (
         <Error message="It looks like you’re on Rinkeby Network. Please change to Mainnet to continue." />
       )}
+      <Second />
     </Container>
   );
 };

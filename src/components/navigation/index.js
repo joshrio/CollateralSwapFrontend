@@ -3,6 +3,7 @@ import React, { Component } from "react";
 
 // Relative Imports
 import { Container, Button, Brand } from "./styles";
+import logo from "../../assets/logo/logo.svg";
 
 class Navigation extends Component {
   state = {
@@ -18,7 +19,7 @@ class Navigation extends Component {
     const { wallet, connected } = this.state;
     return (
       <Container>
-        <Brand>CS</Brand>
+        <Brand src={logo} />
         <Button onClick={this.handleConnect}>
           {connected ? wallet : "Connect Wallet"}
         </Button>

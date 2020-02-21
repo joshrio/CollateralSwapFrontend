@@ -13,6 +13,8 @@ export const Container = styled.div`
   flex-direction: column;
   margin-left: 20px;
   margin-right: 20px;
+
+  z-index: 100;
 `;
 
 export const Header = styled.div`

@@ -14,7 +14,6 @@ export const Select = styled.div`
   background: pink;
   border: 1px solid #dcdcdc;
   border-radius: 4px;
-
   transition: 500ms;
 
   &:focus {
@@ -74,11 +73,6 @@ export const Item = styled.li`
   background: #ffffff;
   transition: 1s;
 
-  &:disabled {
-    cursor: not-allowed;
-    background: red;
-  }
-
   &:hover {
     cursor: pointer;
     background: #eaeaea;
@@ -94,10 +88,6 @@ export const Row = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-
-  &:disabled {
-    background: red;
-  }
 `;
 
 export const Ticker = styled.div`
@@ -107,6 +97,7 @@ export const Ticker = styled.div`
   background: #07849f;
   padding: 2px 8px;
   border-radius: 3px;
+  cursor: pointer;
 `;
 
 export const Name = styled.div`
@@ -130,7 +121,7 @@ export const Button = styled.button`
     font-family: dinRegular;
     maring-top: 3px;
 
-&:before{
+&:before {
     content:"";
     position: absolute;
     width: 0px;

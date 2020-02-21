@@ -8,7 +8,7 @@ import Dropdown from "../../dropdown/index.js";
 const platforms = [
   {
     name: "MakerDAO",
-    status: "Available"
+    status: ""
   },
   {
     name: "Synthetix",
@@ -48,7 +48,7 @@ class SwappingCollateral extends Component {
       status: "Available"
     },
     collateral: {
-      value: "Swap Collateral"
+      value: "Select Collateral"
     },
     vaults: {
       value: "Select Vault"
@@ -59,12 +59,7 @@ class SwappingCollateral extends Component {
   };
 
   selectPlatform = option => {
-    const { name } = option;
-    const { platform } = this.state;
-
-    this.setState({
-      platform: { ...platform, value: name }
-    });
+    return null;
   };
 
   selectCollateral = option => {

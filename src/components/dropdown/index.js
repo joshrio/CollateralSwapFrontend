@@ -37,10 +37,10 @@ class Dropdown extends React.Component {
     return options.map(option => {
       const { name, status } = option;
       return (
-        <Item key={name} onClick={() => onClick(option)}>
+        <Item disabled key={name} onClick={() => onClick(option)}>
           <Row>
             <Name>{name}</Name>
-            {status && <Ticker>{status}</Ticker>}
+            {status === "Coming Soon" && <Ticker>{status}</Ticker>}
           </Row>
         </Item>
       );

@@ -13,4 +13,5 @@ export const Container = styled.div`
   font-size: 16px;
   position: absolute;
   text-align: center;
+  z-index: 1000;
 `;

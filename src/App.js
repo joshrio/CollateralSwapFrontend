@@ -46,6 +46,14 @@ class App extends Component {
     });
   };
 
+  handleConfirmation = () => {
+    this.setState({
+      count: 3,
+      button: "Confirm Transaction...",
+      status: "enabled"
+    });
+  };
+
   handleButton = () => {
     // Switch Statement to handle the display of component states
     const { count } = this.state;
@@ -57,11 +65,8 @@ class App extends Component {
           status: "enabled"
         });
       case 2:
-        return this.setState({
-          count: 3,
-          button: "Confirm Transaction...",
-          status: "enabled"
-        });
+        return this.handleConfirmation();
+
       case 3:
         return this.setState({
           count: 4,
