@@ -1,5 +1,23 @@
 import styled from "styled-components";
 
+export const Body = styled.div`
+  min-height: 360px;
+  height: auto;
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+`
+
+export const Button = styled.button`
+  background: rgba(0, 0, 0, 0);
+  height: 40px;
+  border: none;
+
+  &:hover {
+    cursor: pointer;
+  }
+`
+
 export const Container = styled.div`
   min-height: 595px;
   height: auto;
@@ -13,9 +31,16 @@ export const Container = styled.div`
   flex-direction: column;
   margin-left: 20px;
   margin-right: 20px;
-
-  z-index: 100;
+  z-index: 0;
 `;
+
+export const Description = styled.div`
+	font-family: dinRegular;
+	font-size: 18px;
+	color: #544f4f;
+	letter-spacing: 0;
+	line-height: 27px;
+`
 
 export const Header = styled.div`
   height: auto;
@@ -29,87 +54,4 @@ export const Title = styled.div`
   color: #2a2a2a;
   letter-spacing: 0;
   line-height: 42px;
-`;
-
-export const Description = styled.div`
-  font-family: dinRegular;
-  font-size: 18px;
-  color: #544f4f;
-  letter-spacing: 0;
-  line-height: 27px;
-`;
-
-export const Body = styled.div`
-  min-height: 360px;
-  height: auto;
-  display: flex;
-  height: 100%;
-  flex-direction: column;
-`;
-
-export const Button = styled.button`
-  background: #07849f;
-  border-radius: 4px;
-  height: 52px;
-  width: 100%;
-  color: white;
-  font-family: dinRegular;
-  font-size: 18px;
-  padding-top: 8px;
-  border: none;
-  outline: none;
-  transition: 1s;
-
-  &:hover {
-    cursor: pointer;
-    transition: 1s;
-    background: #0e6a7f;
-  }
-
-  &:disabled {
-    color: rgba(255, 255, 255, 0.5);
-    cursor: not-allowed;
-  }
-`;
-
-export const Form = styled.form`
-  height: auto;
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  height: 100%;
-`;
-
-export const Fees = styled.div`
-  height: auto;
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-`;
-
-export const Bold = styled.div`
-  font-family: dinBold;
-  font-size: 16px;
-  color: #2a2a2a;
-  letter-spacing: 0;
-  line-height: 24px;
-`;
-
-export const Row = styled.div`
-  display: flex;
-  justify-content: space-between;
-`;
-
-export const Label = styled.div`
-  font-family: dinRegular;
-  font-size: 16px;
-  color: #2a2a2a;
-  letter-spacing: 0;
-  line-height: 24px;
-`;
-
-export const Footer = styled.div`
-  height: auto;
-  padding: 0px 20px 20px 20px;
-  width: auto;
 `;

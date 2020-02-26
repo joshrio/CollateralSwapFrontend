@@ -1,50 +1,45 @@
-// Library Imports
-import React, { Component } from "react";
+import React, { useState } from "react";
+import { Layer } from "grommet"
+import { CircleInformation } from "grommet-icons"
 
-// Relative Imports
-import {
-  Container,
-  Header,
-  Title,
-  Description,
-  Button,
-  Footer,
-  Body
-} from "./styles";
+import Web3Unavailable from "../states/Web3Unavailable"
+import Web3NotEnabled from "../states/Web3NotEnabled"
+import Web3Enabled from "../states/Web3Enabled"
 
-class Modal extends Component {
-  render() {
-    const {
-      onClick,
-      children,
-      button,
-      status,
-      count,
-      connected,
-      connectWallet
-    } = this.props;
+import Information from "../copy/Information"
+import { Body, Button, Container, Description, Header, Title } from "./styles"
 
-    return (
-      <Container>
-        <Header>
-          <Title>Collateral Swap</Title>
-          <Description>
-            Instantly swap collateral across DeFi platforms.
-          </Description>
-        </Header>
-        <Body>{children}</Body>
-        <Footer>
-          {status === "enabled" ? (
-            <Button onClick={onClick}>{button}</Button>
-          ) : (
-            <Button disabled onClick={onClick}>
-              {button}
-            </Button>
-          )}
-        </Footer>
-      </Container>
-    );
-  }
+const Modal = ({ account, loadWeb3, loading, setLoading, web3, web3Status }) => {
+
+	let [showInfo, setShowInfo] = useState(false)
+
+	return (
+		<Container>
+			<Header>
+				<Title>Collateral Swap (alpha)</Title>
+				<Description>
+					Instantly swap the collateral of your vault.
+					<Button onClick={() => setShowInfo(true)}>
+						<CircleInformation size="small" color="#07849f" />
+					</Button>
+				</Description>
+			</Header>
+			{showInfo && (
+				<Layer onEsc={() => setShowInfo(false)} onClickOutside={() => setShowInfo(false)}>
+					<Information closeAction={() => setShowInfo(false)} />
+				</Layer>
+			)}
+			<Body>
+				{web3Status < 0 ? (
+					<Web3Unavailable />
+				) : web3Status === 0 ? (
+					<Web3NotEnabled loadWeb3={loadWeb3} />
+				) : (
+					<Web3Enabled web3={web3} account={account} loading={loading} setLoading={setLoading} />
+				)}
+			</Body>
+		</Container>
+	)
 }
 
-export default Modal;
+export default Modal

@@ -7,11 +7,9 @@ More info: [Twitter thread](https://twitter.com/daveytea/status/1224760425272745
 
 Live version of [Collateral Swap](https://collateralswap.com)
 
-## For devs & designers
- - I've tried to build this for ease of extensibility and skinning. 
- - For the designers, only `App.js` and the files in `/components` need to be modified. The rest should 'just work'.
- - Current ghetto version uses Grommet: https://v2.grommet.io/
- - Contributing: Fork the repo and send PRs 💌
+## Code Style guide
+ - Minimal / no usage of `;` ([Visual Studio instructions](https://stackoverflow.com/a/54584907/4769084))
+ - For indentation, use 4 spaces ([Visual Studio instructions](https://stackoverflow.com/a/38556923/4769084))
 
 ## To run
 ```

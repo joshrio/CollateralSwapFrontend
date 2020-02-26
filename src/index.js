@@ -1,12 +1,13 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import App from "./App";
-import GlobalStyle from "./globalStyles.js";
+import React from "react"
+import ReactDOM from "react-dom"
+import App from "./App"
+import { ToastProvider } from "react-toast-notifications"
+import { GlobalStyle } from "./App.styles.js"
 
 ReactDOM.render(
-  <>
-    <GlobalStyle />
-    <App />
-  </>,
-  document.getElementById("root")
-);
+	<ToastProvider placement="top-center" autoDismissTimeout={7000}>
+		<GlobalStyle />
+		<App />
+	</ToastProvider>,
+	document.getElementById("root")
+)

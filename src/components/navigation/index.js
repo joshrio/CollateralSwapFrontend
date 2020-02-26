@@ -1,31 +1,28 @@
 // Library Imports
-import React, { Component } from "react";
+import React from "react";
+import Loader from "react-loader-spinner"
+import "react-loader-spinner/dist/loader/css/react-spinner-loader.css"
 
 // Relative Imports
 import { Container, Button, Brand } from "./styles";
 import logo from "../../assets/logo/logo.svg";
 
-class Navigation extends Component {
-  state = {
-    connected: false,
-    wallet: "0x1234....4321"
-  };
-
-  handleConnect = () => {
-    alert("Trigger Metamask Window");
-  };
-
-  render() {
-    const { wallet, connected } = this.state;
-    return (
-      <Container>
-        <Brand src={logo} />
-        <Button onClick={this.handleConnect}>
-          {connected ? wallet : "Connect Wallet"}
-        </Button>
-      </Container>
-    );
-  }
+const Navigation = (props) => {
+  let { web3Status, loadWeb3, loading } = props
+  return (
+		<Container>
+			<Brand src={logo} />
+			{web3Status < 0 ? (
+				<Button disabled>No wallet detected</Button>
+			) : web3Status === 0 ? (
+				<Button onClick={async () => await loadWeb3()}>Connect Wallet</Button>
+			) : (
+				<Button disabled>
+					{loading ? <Loader visible={loading} type="ThreeDots" color="rgba(255, 255, 255, 0.5)" width={40} height={10} /> : "Connected"}
+				</Button>
+			)}
+		</Container>
+  )
 }
 
 export default Navigation;

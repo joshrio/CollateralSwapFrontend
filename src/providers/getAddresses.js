@@ -27,7 +27,7 @@ const getAddresses = () => {
       dai: "0x6B175474E89094C44Da98b954EedeAC495271d0F",
       bat: "0x0d8775f648430679a709e98d2b0cb6250d2887ef"
     }
-  };
-};
+  }
+}
 
-export default getAddresses;
+export default getAddresses
