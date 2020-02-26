@@ -5,12 +5,13 @@
   "homepage": "https://collateralswap.com",
   "dependencies": {
     "gh-pages": "^2.2.0",
-    "grommet": "^2.10.0",
+    "grommet": "^2.11.1",
     "grommet-icons": "^4.4.0",
     "react": "16.11.0",
     "react-dom": "16.11.0",
     "react-loader-spinner": "^3.1.5",
     "react-scripts": "^3.3.1",
+    "react-toast-notifications": "^2.4.0",
     "styled-components": "^5.0.1",
     "web3": "1.2.2"
   },
