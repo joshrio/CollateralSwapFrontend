@@ -14,7 +14,7 @@ import { Bold, BlankButton, Button, Fees, Footer, Image, Label, Row } from "../s
 import gfx_noProxy from "../../assets/illustrations/swapping.svg" // @joshio please change
 
 const MakerSwapComponent = ({ account, loading, setLoading, web3 }) => {
-	const { addToast } = useToasts()
+	const { addToast, removeAllToasts } = useToasts()
     let [userProxy, setUserProxy] = useState(null)
 
     useEffect(() => {
@@ -71,13 +71,16 @@ const MakerSwapComponent = ({ account, loading, setLoading, web3 }) => {
 	}, [message, error, txHash, addToast])
 
     async function swap() {
-        setLoading(true)
+		setLoading(true)
+		addToast("Performing swap... this may take a few minutes", { appearance: 'info' })
         console.log(`Account: ${account}, DSProxy: ${userProxy}, cdpId: ${selectedCdp}, option: ${option}`)
         try {
-            let result = await performSwap(web3, account, selectedCdp, option)
+			let result = await performSwap(web3, account, selectedCdp, option)
+			removeAllToasts()
             setTxhash(result ? result.transactionHash : null)
-            setMessage(`${result && result.status ? "Successful" : "Unsuccessful"} collateral swap`)
+            setMessage(`${result && result.status ? "Successful" : "Unsuccessful"} collateral swap!`)
         } catch (e) {
+			removeAllToasts()
             setError(`😱 Error occured! ${e.message}`)
         }
         setLoading(false)
