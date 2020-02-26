@@ -1,29 +1,29 @@
-import React from "react";
+import React from "react"
 
-import { Container, Select, Wrapper, Item, Button, Labels, Name, Row, Label } from "./styles";
+import { Container, Select, Wrapper, Item, Button, Labels, Name, Row, Label } from "./styles"
 
 class Dropdown extends React.Component {
   state = {
     displayMenu: false,
     selected: this.props.placeholder
-  };
+  }
 
   showDropdownMenu = event => {
-    event.preventDefault();
+    event.preventDefault()
     this.setState({ displayMenu: true }, () => {
-      document.addEventListener("click", this.hideDropdownMenu);
-    });
-  };
+      document.addEventListener("click", this.hideDropdownMenu)
+    })
+  }
 
   hideDropdownMenu = () => {
     this.setState({ displayMenu: false }, () => {
-      document.removeEventListener("click", this.hideDropdownMenu);
-    });
-  };
+      document.removeEventListener("click", this.hideDropdownMenu)
+    })
+  }
 
   renderOptions = () => {
-    const { onSelect, options, showKey } = this.props;
-    return Object.keys(options).map(key => {
+    const { onSelect, options, showKey } = this.props
+    let optionsList =  Object.keys(options).map(key => {
       let name = showKey ? `${key} (${options[key]})` : options[key]
       return (
         <Item disabled key={name} onClick={() => onSelect(key)}>
@@ -31,13 +31,15 @@ class Dropdown extends React.Component {
             <Name>{name}</Name>
           </Row>
         </Item>
-      );
-    });
-  };
+      )
+    })
+
+    return showKey ? optionsList.reverse() : optionsList
+  }
 
   render() {
-    const { displayMenu } = this.state;
-    const { label, error, value, placeholder, options, showKey } = this.props;
+    const { displayMenu } = this.state
+    const { label, error, value, placeholder, options, showKey } = this.props
     let display = showKey ? `${value} (${options[value]})` : value
     return (
       <Container>
@@ -54,8 +56,8 @@ class Dropdown extends React.Component {
           {displayMenu && <Wrapper>{this.renderOptions()}</Wrapper>}
         </Select>
       </Container>
-    );
+    )
   }
 }
 
-export default Dropdown;
+export default Dropdown

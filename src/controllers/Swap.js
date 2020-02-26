@@ -67,7 +67,7 @@ export const performSwap = async (web3, account, cdpId, option) => {
     .execute(addresses.collateralSwap.beta, flashloanCalldata)
     .send({
       from: account,
-      gas: 1000000,
+      gas: 1500000,
       gasPrice: web3.utils.toWei(`${gasPrice}`, "gwei")
     })
 
