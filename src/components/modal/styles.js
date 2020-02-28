@@ -6,7 +6,7 @@ export const Body = styled.div`
   display: flex;
   height: 100%;
   flex-direction: column;
-`
+`;
 
 export const Button = styled.button`
   background: rgba(0, 0, 0, 0);
@@ -16,7 +16,7 @@ export const Button = styled.button`
   &:hover {
     cursor: pointer;
   }
-`
+`;
 
 export const Container = styled.div`
   min-height: 595px;
@@ -35,12 +35,12 @@ export const Container = styled.div`
 `;
 
 export const Description = styled.div`
-	font-family: dinRegular;
-	font-size: 18px;
-	color: #544f4f;
-	letter-spacing: 0;
-	line-height: 27px;
-`
+  font-family: dinRegular;
+  font-size: 18px;
+  color: #544f4f;
+  letter-spacing: 0;
+  line-height: 27px;
+`;
 
 export const Header = styled.div`
   height: auto;
@@ -54,4 +54,24 @@ export const Title = styled.div`
   color: #2a2a2a;
   letter-spacing: 0;
   line-height: 42px;
+  padding-top: 4px;
+`;
+
+export const Tag = styled.div`
+  font-family: dinBold;
+  font-size: 13px;
+  color: white;
+  background: #07849f;
+  letter-spacing: 0;
+  padding: 4px 8px;
+  text-transform: uppercase;
+  padding-top: 6px;
+  border-radius: 4px;
+`;
+
+export const Headline = styled.div`
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 `;
