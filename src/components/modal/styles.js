@@ -50,7 +50,7 @@ export const Header = styled.div`
 
 export const Title = styled.div`
   font-family: dinBold;
-  font-size: 28px;
+  font-size: 27px;
   color: #2a2a2a;
   letter-spacing: 0;
   line-height: 42px;
