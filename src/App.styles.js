@@ -52,7 +52,6 @@ export const OvalFirst = styled.div`
   position: absolute;
   z-index: 0;
   transform: rotate(90deg);
-  display: none;
 `;
 
 export const OvalSecond = styled.div`
@@ -65,5 +64,4 @@ export const OvalSecond = styled.div`
   position: absolute;
   z-index: 0;
   transform: rotate(-90deg);
-  display: none;
 `;

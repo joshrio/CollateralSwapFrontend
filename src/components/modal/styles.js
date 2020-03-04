@@ -6,7 +6,7 @@ export const Wrapper = styled.div`
   width: auto;
   padding: 20px;
   display: flex;
-
+  z-index: 100;
 `;
 
 export const Body = styled.div`
