@@ -8,14 +8,14 @@ const Web3Unavailable = () => (
 			<Image src={connect_wallet} />
 			<Microcopy>
 				<Column>
-					<Title>No Ethereum wallet detected!</Title>
-					<Description>To get started please connect your Ethereum wallet or use an Ethereum compatible browser.<br />E.g. Chrome with Metamask</Description>
+					<Title>No Wallet Detected</Title>
+					<Description>To get started please connect an Ethereum wallet or use an Ethereum compatible browser.<br />E.g. Chrome with Metamask</Description>
 				</Column>
 			</Microcopy>
 		</Body>
 		<Footer>
 			<Button disabled>
-				No wallet detected
+				No Wallet Detected
 			</Button>
 		</Footer>
 	</>

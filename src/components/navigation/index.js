@@ -13,7 +13,7 @@ const Navigation = (props) => {
 		<Container>
 			<Brand src={logo} />
 			{web3Status < 0 ? (
-				<Button disabled>No wallet detected</Button>
+				<Button disabled>No Wallet Detected</Button>
 			) : web3Status === 0 ? (
 				<Button onClick={async () => await loadWeb3()}>Connect Wallet</Button>
 			) : (
