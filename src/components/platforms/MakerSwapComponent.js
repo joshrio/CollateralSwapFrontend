@@ -91,22 +91,19 @@ const MakerSwapComponent = ({ account, loading, setLoading, web3 }) => {
         return (
 			<Fill>
 				<>
-				<Bold>It doesn't look like you've set up your account / Vault on MakerDAO's official Oasis.app.</Bold>
+				<Bold>Oh no! It looks like you haven't set up a Vault on MakerDAO's official
+				Oasis.app yet. To use Collateral Swap please complete the following steps:
+				</Bold>
 				<Label>
-					Complete the setup steps on{" "}
-					<a href="https://oasis.app/borrow" target="_blank" rel="noopener noreferrer">
-						Oasis borrow
-					</a>{" "}
-					by:
-					<li>Creating a vault</li>
-					<li>Unlocking DAI</li>
-					<li>Generating a small amount of debt (i.e. borrow DAI)</li>
-					<li>Then refresh this page</li>
+					<li>Create a Vault</li>
+					<li>Unlock DAI</li>
+					<li>Borrow DAI</li>
+					<li>Refresh this page</li>
 				</Label>
-				<br />
+				<div>To get started click the Open Oasis button below.</div>
 				</>
 				<Footer>
-					<ButtonLink target="__blank">Open Oasis</ButtonLink>
+					<ButtonLink href="https://oasis.app/borrow" target="_blank" rel="noopener noreferrer">Open Oasis</ButtonLink>
 				</Footer>
 			</Fill>
 		)
@@ -158,7 +155,7 @@ const MakerSwapComponent = ({ account, loading, setLoading, web3 }) => {
 						}
 					/>
 					<Button onClick={() => swap()} disabled={loading || !selectedCdp || !option || !checked}>
-						{loading ? "Waiting for confirmation" : "Perform Swap"}
+						{loading ? "Awaiting Confirmation" : "Swap Collateral"}
 					</Button>
 				</Footer>
 				{showTandCs && (

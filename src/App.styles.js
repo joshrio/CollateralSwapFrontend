@@ -40,8 +40,6 @@ export const Container = styled.div`
   overflow: scroll;
   position: absolute;
   width: 100%;
-
-
 `;
 
 export const OvalFirst = styled.div`

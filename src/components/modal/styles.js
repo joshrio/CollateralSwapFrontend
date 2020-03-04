@@ -6,14 +6,15 @@ export const Wrapper = styled.div`
   width: auto;
   padding: 20px;
   display: flex;
+
 `;
 
 export const Body = styled.div`
   min-height: 360px;
-  height: auto;
   display: flex;
   height: 100%;
   width: auto;
+  max-width: 424px;
   flex-direction: column;
 `;
 
@@ -38,7 +39,6 @@ export const Container = styled.div`
   border-radius: 4px;
   display: flex;
   flex-direction: column;
-
   z-index: 0;
 `;
 

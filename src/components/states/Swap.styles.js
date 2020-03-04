@@ -36,7 +36,8 @@ export const ButtonLink = styled.a`
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	margin-top: -8px;
+	margin-bottom: 2px;
+	text-decoration: none;
 
 	&:hover {
 		cursor: pointer;
@@ -119,6 +120,10 @@ export const Label = styled.div`
 	color: #2a2a2a;
 	letter-spacing: 0;
 	line-height: 24px;
+
+	&:visited {
+		text-decoration: none;
+	}
 `
 
 export const Row = styled.div`
