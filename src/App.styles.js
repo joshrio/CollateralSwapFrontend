@@ -1,9 +1,11 @@
-import styled, { createGlobalStyle } from "styled-components"
+import styled, { createGlobalStyle } from "styled-components";
 import pattern_light from "./assets/backgrounds/pattern_light.svg";
 import oval_full from "./assets/backgrounds/oval_full.svg";
 
-import dinRegular from "./assets/fonts/din-next-regular-latin-1.ttf"
-import dinBold from "./assets/fonts/din-next-bold-latin-1.ttf"
+import dinRegular from "./assets/fonts/din-next-regular-latin-1.ttf";
+import dinBold from "./assets/fonts/din-next-bold-latin-1.ttf";
+import media from './components/constants/media.js'
+
 
 export const GlobalStyle = createGlobalStyle`
   body {
@@ -34,10 +36,12 @@ export const Container = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 100vw;
-  height: 90vh;
+  min-height: calc(100% - 74px);
   overflow: scroll;
   position: absolute;
+  width: 100%;
+
+
 `;
 
 export const OvalFirst = styled.div`
@@ -50,6 +54,7 @@ export const OvalFirst = styled.div`
   position: absolute;
   z-index: 0;
   transform: rotate(90deg);
+  display: none;
 `;
 
 export const OvalSecond = styled.div`
@@ -62,4 +67,5 @@ export const OvalSecond = styled.div`
   position: absolute;
   z-index: 0;
   transform: rotate(-90deg);
+  display: none;
 `;

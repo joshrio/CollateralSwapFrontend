@@ -1,11 +1,10 @@
 import styled from "styled-components"
 
+
 export const Body = styled.div`
 	min-height: 360px;
 	padding: 20px;
 	display: flex;
-	height: 100%;
-	width: auto;
 	flex-direction: column;
 `
 export const Button = styled.button`
@@ -62,6 +61,7 @@ export const Footer = styled.div`
 export const Microcopy = styled.div`
 	height: auto;
 	display: flex;
+	width: auto;
 	flex-direction: column;
 	padding-top: 20px;
 `
@@ -73,4 +73,5 @@ export const Title = styled.div`
 	letter-spacing: 0;
 	line-height: 24px;
 	text-align: center;
+
 `

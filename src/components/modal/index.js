@@ -15,6 +15,7 @@ import {
   Header,
   Title,
   Tag,
+  Wrapper,
   Headline
 } from "./styles";
 
@@ -29,42 +30,44 @@ const Modal = ({
   let [showInfo, setShowInfo] = useState(false);
 
   return (
-    <Container>
-      <Header>
-        <Headline>
-          <Title>Collateral Swap</Title>
-          <Tag>Alpha</Tag>
-        </Headline>
-        <Description>
-          Instantly swap the collateral of your vault.
-          <Button onClick={() => setShowInfo(true)}>
-            <CircleInformation size="small" color="#07849f" />
-          </Button>
-        </Description>
-      </Header>
-      {showInfo && (
-        <Layer
-          onEsc={() => setShowInfo(false)}
-          onClickOutside={() => setShowInfo(false)}
-        >
-          <Information closeAction={() => setShowInfo(false)} />
-        </Layer>
-      )}
-      <Body>
-        {web3Status < 0 ? (
-          <Web3Unavailable />
-        ) : web3Status === 0 ? (
-          <Web3NotEnabled loadWeb3={loadWeb3} />
-        ) : (
-          <Web3Enabled
-            web3={web3}
-            account={account}
-            loading={loading}
-            setLoading={setLoading}
-          />
+    <Wrapper>
+      <Container>
+        <Header>
+          <Headline>
+            <Title>Collateral Swap</Title>
+            <Tag>Alpha</Tag>
+          </Headline>
+          <Description>
+            Instantly swap the collateral of your vault.
+            <Button onClick={() => setShowInfo(true)}>
+              <CircleInformation size="small" color="#07849f" />
+            </Button>
+          </Description>
+        </Header>
+        {showInfo && (
+          <Layer
+            onEsc={() => setShowInfo(false)}
+            onClickOutside={() => setShowInfo(false)}
+          >
+            <Information closeAction={() => setShowInfo(false)} />
+          </Layer>
         )}
-      </Body>
-    </Container>
+        <Body>
+          {web3Status < 0 ? (
+            <Web3Unavailable />
+          ) : web3Status === 0 ? (
+            <Web3NotEnabled loadWeb3={loadWeb3} />
+          ) : (
+            <Web3Enabled
+              web3={web3}
+              account={account}
+              loading={loading}
+              setLoading={setLoading}
+            />
+          )}
+        </Body>
+      </Container>
+    </Wrapper>
   );
 };
 

@@ -4,8 +4,16 @@ export const Body = styled.div`
 	padding: 20px;
 	display: flex;
 	height: 100%;
-	flex-direction: column;
+
 `
+
+export const Fill = styled.div`
+  height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+`;
+
 
 export const Bold = styled.div`
 	font-family: dinBold;
@@ -15,13 +23,39 @@ export const Bold = styled.div`
 	line-height: 24px;
 `
 
+export const ButtonLink = styled.a`
+	background: #07849f;
+	border-radius: 4px;
+	height: 52px;
+	color: white;
+	width: 100%;
+	font-family: dinRegular;
+	font-size: 18px;
+	padding-top: 8px;
+	border: none;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: -8px;
+
+	&:hover {
+		cursor: pointer;
+	}
+
+	&:disabled {
+		color: rgba(255, 255, 255, 0.5);
+		cursor: not-allowed;
+	}
+`
+
 export const BlankButton = styled.button`
-	background: rgba(255, 255, 255, 0);
 	border: none;
 	font-family: inherit;
 	font-size: inherit;
 	color: #07849f;
 	padding: 0px 0px;
+	background: none;
+
 
 	&:hover {
 		cursor: pointer;
@@ -37,9 +71,9 @@ export const Button = styled.button`
 	background: #07849f;
 	border-radius: 4px;
 	height: 52px;
-	width: 100%;
 	color: white;
-	font-family: dinBold;
+	width: 100%;
+	font-family: dinRegular;
 	font-size: 18px;
 	padding-top: 8px;
 	border: none;
@@ -62,7 +96,7 @@ export const Fees = styled.div`
 
 export const Footer = styled.div`
 	height: auto;
-	padding: 10px 0px 0px 0px;
+	padding: 20px 0px 0px 0px;
 	width: auto;
 `
 

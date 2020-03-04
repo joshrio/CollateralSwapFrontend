@@ -20,9 +20,7 @@ const customCheckBoxTheme = {
 }
 
 const Checkbox = ({ node, onChange }) => {
-
     let [checked, setChecked] = useState(false)
-
     const handleChange = (event) => {
         setChecked(event.target.checked)
         onChange(event.target.checked)
@@ -30,7 +28,7 @@ const Checkbox = ({ node, onChange }) => {
 
     return (
 		<PadV>
-			<Grommet theme={deepMerge(grommet, customCheckBoxTheme)}>
+			<Grommet background={"none"} theme={deepMerge(grommet, customCheckBoxTheme)}>
 				<CheckBox label={node} checked={checked} onChange={handleChange} />
 			</Grommet>
 		</PadV>

@@ -9,7 +9,7 @@ import ServiceFees from "../copy/ServiceFees"
 
 import Checkbox from "../checkbox"
 import Dropdown from "../dropdown"
-import { Bold, BlankButton, Button, Fees, Footer, Image, Label, Row } from "../states/Swap.styles"
+import { Bold, BlankButton, Button, Fees, Footer, ButtonLink, Image, Label, Row, Fill, Body } from "../states/Swap.styles"
 
 import gfx_noProxy from "../../assets/illustrations/swapping.svg" // @joshio please change
 
@@ -27,7 +27,7 @@ const MakerSwapComponent = ({ account, loading, setLoading, web3 }) => {
             })()
         }
 	}, [web3, account, setLoading])
-	
+
 	let [cdps, setCdps] = useState({ "": "Loading your vaults..." })
 	let [selectedCdp, setSelectedCdp] = useState(null)
 
@@ -50,7 +50,7 @@ const MakerSwapComponent = ({ account, loading, setLoading, web3 }) => {
     let [message, setMessage] = useState(null)
     let [error, setError] = useState(null)
 	let [txHash, setTxhash] = useState(null)
-	
+
 	useEffect(() => {
 		if (message && txHash) {
 			let txLink = (
@@ -85,12 +85,13 @@ const MakerSwapComponent = ({ account, loading, setLoading, web3 }) => {
         }
         setLoading(false)
     }
-    
+
     if (!userProxy) {
+
         return (
-			<>
+			<Fill>
+				<>
 				<Bold>It doesn't look like you've set up your account / Vault on MakerDAO's official Oasis.app.</Bold>
-				<br />
 				<Label>
 					Complete the setup steps on{" "}
 					<a href="https://oasis.app/borrow" target="_blank" rel="noopener noreferrer">
@@ -103,8 +104,11 @@ const MakerSwapComponent = ({ account, loading, setLoading, web3 }) => {
 					<li>Then refresh this page</li>
 				</Label>
 				<br />
-				<Image src={gfx_noProxy} />
-			</>
+				</>
+				<Footer>
+					<ButtonLink target="__blank">Open Oasis</ButtonLink>
+				</Footer>
+			</Fill>
 		)
     } else {
         return (

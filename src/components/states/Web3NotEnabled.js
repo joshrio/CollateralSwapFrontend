@@ -1,9 +1,9 @@
 import React from "react"
-import { Body, Button, Column, Description, Footer, Image, Microcopy, Title  } from "./Web3.styles"
+import { Body, Button, Column, Description, Footer, Image, Microcopy, Title, Wrapper  } from "./Web3.styles"
 import connect_wallet from "../../assets/illustrations/connect.svg"
 
 const Web3NotEnabled = props => (
-  <>
+   <>
    <Body>
       <Image src={connect_wallet} />
       <Microcopy>
@@ -18,9 +18,10 @@ const Web3NotEnabled = props => (
       </Microcopy>
     </Body>
     <Footer>
-      <Button onClick={async () => await props.loadWeb3()}>Connect wallet</Button>
+      <Button onClick={async () => await props.loadWeb3()}>Connect Wallet</Button>
     </Footer>
-  </>
+    </>
+
 );
 
 export default Web3NotEnabled;

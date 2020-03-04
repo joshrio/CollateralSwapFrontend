@@ -1,10 +1,19 @@
 import styled from "styled-components";
+import media from "../constants/media.js";
+
+export const Wrapper = styled.div`
+  height: auto;
+  width: auto;
+  padding: 20px;
+  display: flex;
+`;
 
 export const Body = styled.div`
   min-height: 360px;
   height: auto;
   display: flex;
   height: 100%;
+  width: auto;
   flex-direction: column;
 `;
 
@@ -21,7 +30,7 @@ export const Button = styled.button`
 export const Container = styled.div`
   min-height: 595px;
   height: auto;
-  width: 100%;
+  width: auto;
   max-width: 424px;
   background: #fafafa;
   border: 1px solid #dcdcdc;
@@ -29,8 +38,7 @@ export const Container = styled.div`
   border-radius: 4px;
   display: flex;
   flex-direction: column;
-  margin-left: 20px;
-  margin-right: 20px;
+
   z-index: 0;
 `;
 
@@ -53,7 +61,7 @@ export const Title = styled.div`
   font-size: 27px;
   color: #2a2a2a;
   letter-spacing: 0;
-  line-height: 42px;
+
   padding-top: 4px;
 `;
 
@@ -67,11 +75,11 @@ export const Tag = styled.div`
   text-transform: uppercase;
   padding-top: 6px;
   border-radius: 4px;
+  margin-left: 16px;
 `;
 
 export const Headline = styled.div`
   height: auto;
   display: flex;
-  justify-content: space-between;
   align-items: center;
 `;
